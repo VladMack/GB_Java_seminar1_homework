@@ -25,9 +25,9 @@ public class homework {
     public static void continue_or_not() {
         Scanner input = new Scanner(System.in);
         String con_or_not = "";
-        while (!(con_or_not.equals("yes")) && !(con_or_not.equals("no"))) {
+        while (!(con_or_not.equalsIgnoreCase("yes")) && !(con_or_not.equalsIgnoreCase("no"))) {
             System.out.println("Хотите продолжить? (yes или no)");
-            con_or_not = input.nextLine().toLowerCase();
+            con_or_not = input.nextLine();
         }
         switch (con_or_not) {
             case "yes":
