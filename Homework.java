@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Homework {
@@ -25,14 +26,14 @@ public class Homework {
     public static void continueOrNot() {
         Scanner input = new Scanner(System.in);
         String conOrNot = "";
-        while (!(conOrNot.equalsIgnoreCase("yes")) && !(conOrNot.equalsIgnoreCase("no"))) {
-            System.out.println("Хотите продолжить? (yes или no)");
-            conOrNot = input.nextLine();
+        while (!(conOrNot.equalsIgnoreCase("да")) && !(conOrNot.equalsIgnoreCase("нет"))) {
+            System.out.println("Хотите продолжить?");
+            conOrNot = input.nextLine().toLowerCase();
         }
         switch (conOrNot) {
-            case "yes":
+            case "да":
                 calcUI();
-            case "no":
+            case "нет":
                 break;
         }
     }
