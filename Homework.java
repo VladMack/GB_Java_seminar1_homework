@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class homework {
+public class Homework {
     public static void main(String[] args) {
-        calc_ui();
+        calcUI();
     }
 
-    public static void calc_ui() {
+    public static void calcUI() {
         Scanner input = new Scanner(System.in);
         System.out.printf("Введите первое число: ");
         double a = Double.parseDouble(input.nextLine());
@@ -19,19 +19,19 @@ public class homework {
         double result = calculator(a, b, oper);
         System.out.print("Результат: ");
         System.out.println(result);
-        continue_or_not();
+        continueOrNot();
     }
 
-    public static void continue_or_not() {
+    public static void continueOrNot() {
         Scanner input = new Scanner(System.in);
-        String con_or_not = "";
-        while (!(con_or_not.equalsIgnoreCase("yes")) && !(con_or_not.equalsIgnoreCase("no"))) {
+        String conOrNot = "";
+        while (!(conOrNot.equalsIgnoreCase("yes")) && !(conOrNot.equalsIgnoreCase("no"))) {
             System.out.println("Хотите продолжить? (yes или no)");
-            con_or_not = input.nextLine();
+            conOrNot = input.nextLine();
         }
-        switch (con_or_not) {
+        switch (conOrNot) {
             case "yes":
-                calc_ui();
+                calcUI();
             case "no":
                 break;
         }
